@@ -1,94 +1,92 @@
 .form-input {
- width: 100%;
- margin: 30px;
- position: relative;
+  width: 100%;
+  margin: 30px;
+  position: relative;
 }
 input {
- border: 2px solid #eee;
- line-height: 30px;
- outline: 0;
+  border: 2px solid #eee;
+  line-height: 30px;
+  outline: 0;
 }
 .icon {
- position: absolute;
- right: 15px;
- top: 0;
- font-size: 25px;
- height: 100%;
- display: flex;
- align-items: center;
- justify-content: center;
+  position: absolute;
+  right: 15px;
+  top: 0;
+  font-size: 25px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* <div className="tooltip">Hover over me
- <span className="tooltiptext">Tooltip text</span>
-</div>  */
-
-.tooltip {
- position: relative;
- display: inline-block;
- cursor: pointer;
-}
-
-.tooltip .tooltiptext {
- visibility: hidden;
- width: 120px;
- background-color: #333;
- color: #fff;
- text-align: center;
- border-radius: 4px;
- padding: 5px;
- position: absolute;
- z-index: 1;
- top: 50%;
- left: 50%;
- transform: translate(-50%, -50%);
- opacity: 0;
- transition: opacity 0.3s;
-}
-
-.tooltip:hover .tooltiptext {
- visibility: visible;
- opacity: 1;
-}
-.tooltip .tooltiptext::after {
- content: " ";
- position: absolute;
- top: 100%; /* At the bottom of the tooltip */
- left: 50%;
- margin-left: -5px;
- border-width: 5px;
- border-style: solid;
- border-color: black transparent transparent transparent;
-}
-/* CSS for sender's message */
 .message.self {
- display: flex;
- justify-content: flex-end;
- border-radius: 19px 19px 19px 19px;
+  display: flex;
+  justify-content: flex-end;
+  border-radius: 19px 19px 19px 19px;
 }
 .message.self img {
- display: block;
+  display: block;
 }
 
 /* CSS for receiver's message */
 .message.other {
- display: flex;
- justify-content: flex-start;
- border-radius: 19px 19px 0px 19px;
- margin-right: 2.0rem;
- margin-top: 22px;
- 
+  display: flex;
+  justify-content: flex-start;
+  border-radius: 19px 19px 0px 19px;
+  /* margin-right: 23px; */
+  margin-top: 22px;
 }
 .message.self .chat-section {
- background-color: blue;
- color: white;
- margin: 23px;
- margin-left: 4.4rem;
- border-radius: 19px 19px 0px 19px;
- margin-top: 22px;
+  background-color: blue;
+  color: white;
+  margin-left: 3.5rem;
+
+  margin-left: 4.5rem;
+  border-radius: 19px 19px 0px 19px;
+  margin-top: 22px;
 }
 .message.other .chat-section {
- background-color: white;
- color: black;
- border-radius: 0px 19px 19px 19px;
+  background-color: white;
+  color: black;
+  border-radius: 0px 19px 19px 19px;
+  box-shadow: 0 3px 10px rgba(51, 50, 50, 0.2);
+}
+.user-container {
+  position: relative;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(8, 140, 8);
+  color: #fff;
+  text-align: center;
+
+  padding: 5px 0;
+
+  width: 150px;
+  bottom: 200%;
+  left: -25%;
+  margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+.tooltip .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  top: 100%; /* At the bottom of the tooltip */
+  left: 50%;
+  margin-left: -9px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: green transparent transparent transparent;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }
