@@ -17,15 +17,7 @@ function App() {
   const chatMessages = chatData;
   return (
     <div className="App">
-      <div className="flex flex-row  justify-between">
-        <h1 className="text-[22px] font-semibold mx-4 p-3 ">9:41</h1>
-        <div className="flex  gap-2 p-4 ">
-          {/* <MdWifi size={"24px"} /> */}
-          <FaSignal size={"24px"} />
-          <MdWifi size={"24px"} />
-          <BsBatteryFull size={"24px"} />
-        </div>
-      </div>
+    
       <div className="flex mt-8 justify-between">
         <div className="flex gap-2 ">
           <div className="mt-2">
@@ -45,15 +37,15 @@ function App() {
           }
         />
         <div className="mx-4">
-          <p className="lg:text-[19px]">
+          <p className="text-[16px] text-[#606060] heading">
             From{" "}
-            <span className="font-bold text-[20px] lg:[28px] text-gray-700">
+            <span className="font-bold text-[18px]  text-[#141E0D]">
               {chatMessages.from}
             </span>
           </p>
-          <p className="lg:text-[19px]">
+          <p className="text-[16px] font-[500] text-[#606060]  heading ">
             To{" "}
-            <span className="font-bold text-[20px] lg:text-[26px] text-gray-700">
+            <span className="font-bold text-[18px] lg:text-[26px] text-[#141E0D]  heading">
               {chatMessages.to}
             </span>
           </p>
@@ -93,41 +85,36 @@ function App() {
         ></div>
       </div>
 
-      <div className=" flex  flex-col mx-6">
-        {chatData.chats.map((chat) => {
-          return (
-            <>
-              <div
-                key={chat.id}
-                className={chat.sender.self ? "message self" : "message other"}
-              >
-                {!chat.sender.self && (
-                  // <div className="">
-                  <>
-                <div className="absolute mx-[-20px]">
-                    <img
-                      className="rounded-full h-[20%] w-[24%] opacity-[0.9] mt-2 lg:w-[47px] "
-                      src={chat.sender.image}
-                      alt="User"
-                    />
-                   {chat.sender.is_kyc_verified && (
-              <span className="relative bottom-4 left-7 ">
-                <BiSolidBadgeCheck color="blue" style={{ opacity: "0.7" }} />
-              </span>
-            )}
-                 
-                    </div>
-                    </>
-                 
-                )}
-                <div className="bg-red-100 chat-section p-[7px] mt-4 lg:m-  ml-7 lg:ml-[36px] text-left ">
-                  <p>{chat.message}</p>
-                </div>
-              </div>
-            </>
-          );
-        })}
+      <div className="flex flex-col left-[16px] gap-8">
+  {chatData.chats.map((chat) => {
+    return (
+      <div key={chat.id} className="message-container">
+        {!chat.sender.self && (
+          <div className="user-info">
+            <div>
+              <img
+                className="rounded-[999px] h-[24px] w-[24px] opacity-[0.9] mt-2 lg:w-[47px]"
+                src={chat.sender.image}
+                alt="User"
+              />
+              {/* {chat.sender.is_kyc_verified && (
+                <span className="kyc-verified-badge ">
+                  <BiSolidBadgeCheck className="" color="blue" style={{ opacity: "0.7" }} />
+                </span>
+              )} */}
+            </div>
+          </div>
+        )}
+        <div className={chat.sender.self ? "message self" : "message other"}>
+          <div className="chat-section ">
+            <p>{chat.message}</p>
+          </div>
+        </div>
       </div>
+    );
+  })}
+</div>
+
 
       <div className="flex justify-between  ">
         <div className="form-input relative mx-2 ">

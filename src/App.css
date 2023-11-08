@@ -8,7 +8,7 @@ input {
   line-height: 30px;
   outline: 0;
 }
-.icon {
+/* .icon {
   position: absolute;
   right: 15px;
   top: 0;
@@ -18,40 +18,21 @@ input {
   align-items: center;
   justify-content: center;
 }
+*/
 
-.message.self {
-  display: flex;
-  justify-content: flex-end;
-  border-radius: 19px 19px 19px 19px;
-}
-.message.self img {
+/* .message.self img {
   display: block;
-}
+}  */
 
-/* CSS for receiver's message */
-.message.other {
+/* .message.other {
   display: flex;
   justify-content: flex-start;
-  border-radius: 19px 19px 0px 19px;
-  
-  margin-right: 29px;
-  margin-top: 22px;
-}
-.message.self .chat-section {
-  background-color: blue;
-  color: white;
-  margin-left: 3.5rem;
-  border-radius: 19px 19px 0px 19px;
-  margin-top: 22px;
-}
-.message.other .chat-section {
-  background-color: white;
-  color: gray;
-  font: thin;
+  border-radius: 0px ,12px,12px,12px;
+  gap: 16px;
+ padding: 8px;
 
-  border-radius: 0px 19px 19px 19px;
-  box-shadow: 0 3px 10px rgba(51, 50, 50, 0.2);
-}
+} */
+
 .user-container {
   position: relative;
 }
@@ -91,3 +72,72 @@ input {
 .tooltip:hover .tooltiptext {
   visibility: visible;
 }
+/* .other-section{
+  border-radius: 0px, 12px,12px,12px;
+  padding: 8px;
+  gap: 16px;
+  background-color: #FFFFFF;
+  box-shadow: #000000;
+  line-height: 17.57px;
+  size: 14px;
+  font-weight: 400;
+  font: Mulish;
+} */
+
+.message.self {
+  font-family: Mulish;
+
+  background-color: #1c63d5;
+  color: #ffffff;
+  padding: 8px;
+  gap: 16px;
+  border-radius: 12px 12px 0px 12px;
+  margin-left: 68px;
+  margin-right: 20px;
+}
+.message.self .chat-section {
+  font-weight: 400;
+  size: 14px;
+  color: #ffffff;
+ 
+}
+.message.self .chat-section p {
+  color: #ffffff;
+}
+.message.other {
+  font-family: Mulish;
+
+  background-color: #FFFFFF;
+  color: #000000;
+  padding: 8px;
+  gap: 16px;
+  border-radius: 0px 12px 12px 12px;
+  margin-left: 29px;
+  margin-right: 40px;
+  margin-top: -20px;
+}
+
+.message.other .chat-section {
+  font-weight: 400;
+  size: 14px;
+  /* line-height: 17.57; */
+  color: #606060;
+}
+.heading{
+  color: #606060;
+
+font-family: Mulish;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+.heading span{
+  color: #141E0D;
+  font-family: Mulish;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
