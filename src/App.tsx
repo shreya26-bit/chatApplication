@@ -120,7 +120,7 @@ function App() {
                     </>
                  
                 )}
-                <div className="bg-red-100 chat-section p-[7px] mt-4 lg:m-  ml-7 lg:ml-[44px] text-left ">
+                <div className="bg-red-100 chat-section p-[7px] mt-4 lg:m-  ml-7 lg:ml-[36px] text-left ">
                   <p>{chat.message}</p>
                 </div>
               </div>
