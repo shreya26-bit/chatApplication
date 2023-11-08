@@ -93,7 +93,7 @@ function App() {
           <div className="user-info">
             <div>
               <img
-                className="rounded-[999px] h-[24px] w-[24px] opacity-[0.9] mt-2 lg:w-[47px]"
+                className="rounded-[999px] h-[24px] w-[24px] opacity-[0.9] mt-2 "
                 src={chat.sender.image}
                 alt="User"
               />
