@@ -106,7 +106,7 @@ function App() {
                   <>
                 <div className="absolute mx-[-20px]">
                     <img
-                      className="rounded-full h-[20%] w-[24%] opacity-[0.9] mt-2 lg:w-[53px] "
+                      className="rounded-full h-[20%] w-[24%] opacity-[0.9] mt-2 lg:w-[47px] "
                       src={chat.sender.image}
                       alt="User"
                     />
@@ -120,7 +120,7 @@ function App() {
                     </>
                  
                 )}
-                <div className="bg-red-100 chat-section p-[7px] mt-3 lg:mt-9  ml-7 text-left ">
+                <div className="bg-red-100 chat-section p-[7px] mt-4 lg:m-  ml-7 lg:ml-[44px] text-left ">
                   <p>{chat.message}</p>
                 </div>
               </div>
