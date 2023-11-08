@@ -33,21 +33,22 @@ input {
   display: flex;
   justify-content: flex-start;
   border-radius: 19px 19px 0px 19px;
-  /* margin-right: 23px; */
+  
+  margin-right: 29px;
   margin-top: 22px;
 }
 .message.self .chat-section {
   background-color: blue;
   color: white;
   margin-left: 3.5rem;
-
-  margin-left: 4.5rem;
   border-radius: 19px 19px 0px 19px;
   margin-top: 22px;
 }
 .message.other .chat-section {
   background-color: white;
-  color: black;
+  color: gray;
+  font: thin;
+
   border-radius: 0px 19px 19px 19px;
   box-shadow: 0 3px 10px rgba(51, 50, 50, 0.2);
 }

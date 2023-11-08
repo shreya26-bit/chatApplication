@@ -104,20 +104,23 @@ function App() {
                 {!chat.sender.self && (
                   // <div className="">
                   <>
-                
+                <div className="absolute mx-[-20px]">
                     <img
-                      className="rounded-full h-[20%] w-[11%]  mt-2 lg:w-[53px] "
+                      className="rounded-full h-[20%] w-[24%] opacity-[0.9] mt-2 lg:w-[53px] "
                       src={chat.sender.image}
                       alt="User"
                     />
-                    {/* <div className="mt-[29px] my-20  ">
-                    <BiSolidBadgeCheck/>
-                    </div> */}
-                    
+                   {chat.sender.is_kyc_verified && (
+              <span className="relative bottom-4 left-7 ">
+                <BiSolidBadgeCheck color="blue" style={{ opacity: "0.7" }} />
+              </span>
+            )}
+                 
+                    </div>
                     </>
-                  // </div>
+                 
                 )}
-                <div className="bg-red-100 chat-section p-3 mt-4 lg:mt-9 mx-2 ">
+                <div className="bg-red-100 chat-section p-[7px] mt-3 lg:mt-9  ml-7 text-left ">
                   <p>{chat.message}</p>
                 </div>
               </div>
@@ -127,14 +130,14 @@ function App() {
       </div>
 
       <div className="flex justify-between  ">
-        <div className="form-input relative mx-2 p-2">
-          <span className="absolute inset-y-0 right-4 pl-3 flex items-center lg:mx-6 mx-1">
-            <VscSend size={"24px"} />
+        <div className="form-input relative mx-2 ">
+          <span className="absolute inset-y-0 right-1 lg:right-4 lg:pl-3 flex items-center lg:mx-6 ">
+            <VscSend className="" size={"24px"} />
           </span>
 
           <div className="tooltip-container absolute inset-y-0 right-8 pr-3 flex items-center lg:mx-10">
             <div className="tooltip">
-              <div className="tooltip rounded-full mt-2 mx-4">
+              <div className="tooltip rounded-full mt-2 mx-">
                 {" "}
                 <LuPaperclip size={"23px"} />
                 <span className="tooltiptext rounded-full ">
@@ -155,7 +158,7 @@ function App() {
           </div>
 
           <input
-            className="pl-3  py-3  lg:w-full w-[100%] rounded-2xl "
+            className="pl-3  py-3   lg:w-full w-[106%] rounded-[13px] "
             type="email"
             name="email"
             placeholder="Reply to @Rohit Yadav"
@@ -164,7 +167,7 @@ function App() {
       </div>
 
       <div
-        className="mt-4 h-screen flex my-6 m-auto rounded-full "
+        className="mt-4 h-screen flex my-3 m-auto rounded-full "
         style={{
           flex: 1,
           height: "6px",
